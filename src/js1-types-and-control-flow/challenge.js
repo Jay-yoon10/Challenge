@@ -19,7 +19,7 @@ const firstName = "John";
 const lastName = "Smith";
 
 export const createFullName = () => {
-  // Write your code here
+  return firstName + " " + lastName;
 };
 
 /**
@@ -32,7 +32,11 @@ const largeNumber1 = 100;
 const largeNumber2 = 200;
 
 export const findLargestNumber = () => {
-  // Write your code here
+  if (largeNumber1 > largeNumber2){
+    return largeNumber1;
+  }else {
+    return largeNumber2;
+  }
 };
 
 /**
@@ -45,7 +49,7 @@ const addNumber1 = 12;
 const addNumber2 = 24;
 
 export const addNumbers = () => {
-  // Write your code here
+  return addNumber1 + addNumber2;
 };
 
 /* Intermediate Challenges */
@@ -59,7 +63,8 @@ export const addNumbers = () => {
 const password = "thisIsMyVeryLongPassword123456789";
 
 export const findLengthOfPassword = () => {
-  // Write your code here
+  const lengthOfString = password.length;
+  return lengthOfString;
 };
 
 /**
@@ -75,7 +80,15 @@ export const findLengthOfPassword = () => {
 const thing = "I am a thing";
 
 export const findType = () => {
-  // Write your code here
+    if(typeof thing == "string"){
+      return "This is a string"
+    }else if (typeof thing == "number" ){
+      return "This is a number"
+    }else if (typeof thing == "boolean"){
+      return "This is a boolean"
+    }else{
+      "I don't know what this thing is"
+    }
 };
 
 /**
@@ -88,7 +101,11 @@ export const findType = () => {
 const nameTagOption = "Timothy";
 
 export const getIsValidOnNameTag = () => {
-  // Write your code here
+  const firstLetter = nameTagOption.indexOf(0,1);
+  const firstLetterCase = firstLetter.toString();
+  if (firstLetter == firstLetterCase){
+    return true;
+  }else return false;
 };
 
 /* Advanced Challenges */
@@ -102,7 +119,8 @@ export const getIsValidOnNameTag = () => {
 const stringToConvert = "14.45";
 
 export const convertStringToNumber = () => {
-  // Write your code here
+    const valueOfString = parseFloat(stringToConvert);
+  return  valueOfString;
 };
 
 /**
@@ -116,7 +134,12 @@ export const convertStringToNumber = () => {
 const stringWithUppercaseLetters = "I Am A String With Uppercase Letters";
 
 export const getHasUppercaseLetters = () => {
-  // Write your code here
+  const allCaps = stringWithUppercaseLetters.toUpperCase();
+    const pattern = /([abc])/gi;
+    return pattern.test(stringWithUppercaseLetters);
+
+    // http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/jsref/jsref_regexp_test.asp.html
+    // https://www.w3schools.com/jsref/jsref_obj_regexp.asp
 };
 
 /* Expert Challenge */
@@ -130,5 +153,10 @@ export const getHasUppercaseLetters = () => {
 const pascalCaseVariableName = "IWantToBeSnakeCase";
 
 export const convertPascalCaseToSnakeCase = () => {
-  // Write your code here
+  const pattern = pascalCaseVariableName.split(/(?=[A-Z])/g);
+  const replace = pattern.join("_");
+  const pattern2 = replace.toLowerCase();
+  return pattern2;
+  // https://www.w3schools.com/jsref/jsref_join.asp
+  // https://www.w3schools.com/jsref/jsref_join.asp
 };
