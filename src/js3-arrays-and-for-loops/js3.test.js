@@ -23,7 +23,7 @@ const ingredients = ["Bacon", "Lettuce", "Tomato"];
 const ingredientsString = "Bacon+Lettuce+Tomato";
 const itemString = "Apple+Orange+Pear";
 
-describe("Testing createRecipeString()", () => {
+xdescribe("Testing createRecipeString()", () => {
   it("Should be defined", () => {
     expect(createRecipeString(ingredients)).toBeDefined();
   });
@@ -174,7 +174,7 @@ xdescribe("Testing generateAverage()", () => {
   });
 });
 
-xdescribe("Testing reverseOrder()", () => {
+describe("Testing reverseOrder()", () => {
   it("Should be defined", () => {
     expect(reverseOrder(items)).toBeDefined();
   });

@@ -22,7 +22,8 @@
  */
 
 export const createRecipeString = (ingredientsArr) => {
-  return;
+  const recipe = ingredientsArr.join("+")
+  return recipe;
 };
 
 /**
@@ -33,7 +34,10 @@ export const createRecipeString = (ingredientsArr) => {
  */
 
 export const getFirstAndLastItems = (itemsArr) => {
-  return;
+  const firstIndex = itemsArr[0];
+  const LastIndex = itemsArr[itemsArr.length-1];
+  
+  return [firstIndex, LastIndex];
 };
 
 /**
@@ -44,7 +48,12 @@ export const getFirstAndLastItems = (itemsArr) => {
  */
 
 export const totalScores = (scoreArr) => {
-  return;
+  let sum = 0;
+  for(let i=0; i<scoreArr.length; i++){
+    sum += scoreArr[i];
+
+  }
+  return sum;
 };
 
 /**
@@ -60,7 +69,11 @@ export const totalScores = (scoreArr) => {
  */
 
 export const totalRange = (rangeMax) => {
-  return;
+  let sum = 0;
+  for(let i=0; i<= rangeMax; i++){
+    sum += i;
+  }
+  return sum;
 };
 
 /**
@@ -71,7 +84,13 @@ export const totalRange = (rangeMax) => {
  */
 
 export const moveFirstAndLastItems = (itemsArr) => {
-  return;
+  // const newArray = [...itemsArr]; //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+  const newArray = itemsArr.slice();
+const lastElement = newArray.pop();
+console.log(lastElement);
+newArray.unshift(lastElement);
+console.log(newArray);
+return newArray;
 };
 
 /**
@@ -89,7 +108,13 @@ export const moveFirstAndLastItems = (itemsArr) => {
  */
 
 export const removeEvenNumbers = (numberArr) => {
-  return;
+  const newOddNumbersArray = [];
+  for(let i = 0; i < numberArr.length; i++){
+     if (numberArr[i] % 2 !== 0 ){
+         newOddNumbersArray.push(numberArr[i]);
+     }
+  }
+return newOddNumbersArray;
 };
 
 /**
@@ -105,7 +130,9 @@ export const removeEvenNumbers = (numberArr) => {
  */
 
 export const generateAverage = (numberArr) => {
-  return;
+  const sum = totalScores(numberArr);
+  const avg = sum / numberArr.length;
+  return avg > 0 ? Math.round(avg):0;
 };
 
 /**
@@ -116,7 +143,9 @@ export const generateAverage = (numberArr) => {
  */
 
 export const reverseOrder = (toReverseArr) => {
-  return;
+  
+  const newArray = toReverseArr.reverse();
+  return newArray;
 };
 
 /**
