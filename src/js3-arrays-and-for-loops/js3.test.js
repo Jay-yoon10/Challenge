@@ -174,7 +174,7 @@ xdescribe("Testing generateAverage()", () => {
   });
 });
 
-describe("Testing reverseOrder()", () => {
+xdescribe("Testing reverseOrder()", () => {
   it("Should be defined", () => {
     expect(reverseOrder(items)).toBeDefined();
   });
@@ -248,7 +248,7 @@ xdescribe("Testing generateHighscores()", () => {
   });
 });
 
-xdescribe("Testing encryptString()", () => {
+describe("Testing encryptString()", () => {
   it("Should NOT return undefined", () => {
     expect(encryptString("  defined")).toBeDefined();
   });

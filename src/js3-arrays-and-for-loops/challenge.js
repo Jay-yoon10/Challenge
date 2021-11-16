@@ -167,7 +167,16 @@ export const reverseOrder = (toReverseArr) => {
  */
 
 export const generateHighscores = (playersArr, scoresArr) => {
-  return;
+  const newArray = [];
+  for (let i = 0; i < playersArr.length; i++){
+    
+    if(playersArr.length !== scoresArr.length || playersArr.includes()){
+      return "invalid inputs"
+    } else{
+        newArray.push(`P:${i+1} ${playersArr[i]} scored ${scoresArr[i]}`);
+    }
+  }
+  return newArray;
 };
 
 /**
@@ -197,5 +206,10 @@ export const generateHighscores = (playersArr, scoresArr) => {
 // };
 
 export const encryptString = (toEncrypt) => {
-  return;
+  
+  for (let i = 0; i < toEncrypt.length ; i++){
+    const newArray = toEncrypt.match(/.{1,3}/g)
+    console.log(newArray);
+  }
+  return newArray;
 };

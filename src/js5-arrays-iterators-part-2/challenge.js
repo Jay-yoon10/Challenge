@@ -22,7 +22,11 @@
  */
 
 export const totalScoresArr = (scoresArr) => {
-  return;
+  const Total = scoresArr.reduce((acc, cur) => 
+    (acc + cur ))
+
+  
+  return Total;
 };
 
 /**
@@ -35,7 +39,9 @@ export const totalScoresArr = (scoresArr) => {
  */
 
 export const reverseString = (toReverse) => {
-  return;
+  const newArray = toReverse.split("").reverse().join("")
+  console.log(newArray)
+  return newArray;
 };
 
 /**
@@ -48,7 +54,8 @@ export const reverseString = (toReverse) => {
  */
 
 export const sortCharactersAlphabetically = (charcterArr) => {
-  return;
+  const newArray = mixedCaseArr.map((char) => char.toLowerCase()).sort()
+  return newArray
 };
 
 /**
@@ -63,7 +70,9 @@ export const sortCharactersAlphabetically = (charcterArr) => {
  */
 
 export const sortNumbersHighToLow = (numberArr) => {
-  return;
+  const descending = numberArr.sort(function (a, b) {
+    return(b - a)})
+ return descending;
 };
 
 /**
@@ -94,7 +103,11 @@ export const checkItemInstock = (toCheck) => {
     "blueberry",
     "melon",
   ];
-  return;
+ 
+  const stockIndex = 
+  stockList.includes(toCheck) ? `${toCheck} is instock, it is on aisle ${stockList.indexOf(toCheck)}.` 
+  : `Sorry ${toCheck} is not instock.`
+  return stockIndex
 };
 
 /**
@@ -108,7 +121,9 @@ export const checkItemInstock = (toCheck) => {
  */
 
 export const checkPrimaryColours = (coloursArr) => {
-  return;
+  const primaryColours = ["red", "blue", "yellow"];
+  const colourClass = coloursArr.every((colour)=> primaryColours.includes(colour))
+  return colourClass;
 };
 
 /**
@@ -125,7 +140,10 @@ export const checkPrimaryColours = (coloursArr) => {
  */
 
 export const checkStringPalindrome = (stringOne) => {
-  return;
+  const reversedStr = stringOne.split("").reverse().join("")
+
+  const isEqual = reversedStr === stringOne ? true : false;
+  return isEqual
 };
 
 /**
@@ -139,7 +157,9 @@ export const checkStringPalindrome = (stringOne) => {
  */
 
 export const totalNestedScoresArr = (scoresArr) => {
-  return;
+  const total = scoresArr.map(totalScoresArr)
+  
+  return total;
 };
 
 /**

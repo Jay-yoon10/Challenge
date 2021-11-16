@@ -16,7 +16,7 @@ const {
  * REMOVE X FROM DESCRIBE FUNCTION TO STOP SKIPPING TEST BLOCKS
  */
 
-describe("Testing totalScoresArr()", () => {
+xdescribe("Testing totalScoresArr()", () => {
   const scoresArr = Array(50).fill(20);
 
   it("Should return a Number", () => {
@@ -231,7 +231,7 @@ xdescribe("Testing checkStringPalindrome()", () => {
   });
 });
 
-xdescribe("Testing totalNestedScoresArr()", () => {
+describe("Testing totalNestedScoresArr()", () => {
   const nestedScoreArr = [
     [3, 2, 1],
     [45, 6, 2],
